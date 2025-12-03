@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.account.css">
+</head>
+<body>
+
+<div id="overlay"></div>
+
+<header>
+  <nav class="navbar">
+    <div class="nav-content">
+
+      <div class="left-box">
+        <div class="menu-btn" id="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="logo">bonform</div>
+      </div>
+
+      <form class="search-form" action="#" method="get">
+        <input type="text" name="search" placeholder="Search...">
+        <button type="submit">search</button>
+      </form>
+
+      <ul id="nav-links">
+        <li><a href="index.html">home</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="account.html">account</a></li>
+        <li><a href="contact.html">contact us</a></li>
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+<div class="center-wrapper">
+  <div class="container">
+    <h2><b>Login</b></h2>
+
+    <form>
+      <label>Email or Phone</label>
+      <input type="text" placeholder="@gmail.com ..." required>
+
+      <label>Password</label>
+      <input type="password" placeholder="•••••" required>
+
+      <button type="submit">Continue</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn')
+  const nav = document.getElementById('nav-links')
+  const overlay = document.getElementById('overlay')
+
+  menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open')
+    overlay.classList.toggle('show')
+    menuBtn.classList.toggle('close')
+  })
+
+  overlay.addEventListener('click', () => {
+    nav.classList.remove('open')
+    overlay.classList.remove('show')
+    menuBtn.classList.remove('close')
+  })
+</script>
+
+</body>
+</html>
