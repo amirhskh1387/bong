@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Account Login</title>
   <link rel="stylesheet" href="style.account.css">
 </head>
 <body>
@@ -24,11 +24,6 @@
         <div class="logo">bonform</div>
       </div>
 
-      <form class="search-form" action="#" method="get">
-        <input type="text" name="search" placeholder="Search...">
-        <button type="submit">search</button>
-      </form>
-
       <ul id="nav-links">
         <li><a href="index.html">home</a></li>
         <li><a href="about.html">about</a></li>
@@ -42,14 +37,13 @@
 
 <div class="center-wrapper">
   <div class="container">
-    <h2><b>Login</b></h2>
-
+    <h2>Login</h2>
     <form>
-      <label>Email or Phone</label>
-      <input type="text" placeholder="@gmail.com ..." required>
+      <label for="contact">Email or Phone</label>
+      <input type="text" id="contact" name="contact" placeholder="@gmail.com ..." required>
 
-      <label>Password</label>
-      <input type="password" placeholder="•••••" required>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="•••••" required>
 
       <button type="submit">Continue</button>
     </form>
