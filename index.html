@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home Page</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div id="overlay"></div>
+
   <header>
     <nav class="navbar">
       <div class="nav-content">
-        <div class="logo">bonform</div>
 
-        <ul>
+        <div class="left-box">
+          <div class="logo">bonform</div>
+
+          <div class="menu-btn" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <form class="search-form" action="#" method="get">
+          <input type="text" name="search" placeholder="Search...">
+          <button type="submit">search</button>
+        </form>
+
+        <ul id="nav-links">
           <li><a href="index.html">home</a></li>
           <li><a href="about.html">about</a></li>
           <li><a href="title.html">title</a></li>
           <li><a href="contact.html">contact us</a></li>
         </ul>
 
-        <form class="search-form" action="#" method="get">
-          <input type="text" name="search" placeholder="Search..." />
-          <button type="submit">search</button>
-        </form>
       </div>
     </nav>
   </header>
@@ -32,47 +44,41 @@
     <div class="container">
 
       <div class="row">
-        <div class="child1">
-          <h3>title</h3>
-          <p>dddddddddddddddddd</p>
-        </div>
-
-        <div class="child1">
-          <h3>title</h3>
-          <p>dddddddddddddddddd</p>
-        </div>
-
-        <div class="child1">
-          <h3>title</h3>
-          <p>dddddddddddddddddd</p>
-        </div>
+        <div class="child1"><h3>title</h3><p>dddddddddddddddddd</p></div>
+        <div class="child1"><h3>title</h3><p>dddddddddddddddddd</p></div>
+        <div class="child1"><h3>title</h3><p>dddddddddddddddddd</p></div>
       </div>
 
       <div class="row">
-        <div class="child2">
-          <h3>title</h3>
-          <p>dddddddddddddddddddddd</p>
-        </div>
-
-        <div class="child2">
-          <h3>title</h3>
-          <p>dddddddddddddddddddddd</p>
-        </div>
+        <div class="child2"><h3>title</h3><p>dddddddddddddddddddddd</p></div>
+        <div class="child2"><h3>title</h3><p>dddddddddddddddddddddd</p></div>
       </div>
 
       <div class="row">
-        <div class="child3">
-          <h3>title</h3>
-          <p>dddddddddddddddd</p>
-        </div>
-
-        <div class="child3">
-          <h3>title</h3>
-          <p>dddddddddddddddd</p>
-        </div>
+        <div class="child3"><h3>title</h3><p>dddddddddddddddd</p></div>
+        <div class="child3"><h3>title</h3><p>dddddddddddddddd</p></div>
       </div>
 
     </div>
   </main>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn')
+    const nav = document.getElementById('nav-links')
+    const overlay = document.getElementById('overlay')
+
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('open')
+      overlay.classList.toggle('show')
+      menuBtn.classList.toggle('close')
+    })
+
+    overlay.addEventListener('click', () => {
+      nav.classList.remove('open')
+      overlay.classList.remove('show')
+      menuBtn.classList.remove('close')
+    })
+  </script>
+
 </body>
 </html>
