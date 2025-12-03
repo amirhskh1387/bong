@@ -1,82 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
-  <link rel="stylesheet" href="style.index.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style.index.css" />
+  </head>
 
-<body>
-  <div id="overlay"></div>
+  <body>
+    <div id="overlay"></div>
 
-  <header>
-    <nav class="navbar">
-      <div class="nav-content">
+    <header>
+      <nav class="navbar">
+        <div class="nav-content">
+          <div class="left-box">
+            <div class="menu-btn" id="menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
 
-        <div class="left-box">
-          <div class="menu-btn" id="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="logo">bonform</div>
           </div>
 
-          <div class="logo">bonform</div>
+          <form class="search-form" action="#" method="get">
+            <input type="text" name="search" placeholder="Search..." />
+            <button type="submit">Go</button>
+          </form>
+
+          <ul id="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="account.html">account</a></li>
+            <li><a href="contact.html">contact us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="child1">
+            <h3>title</h3>
+            <p>product 1</p>
+          </div>
+          <div class="child1">
+            <h3>title</h3>
+            <p>product 2</p>
+          </div>
+          <div class="child1">
+            <h3>title</h3>
+            <p>product 3</p>
+          </div>
         </div>
 
-        <form class="search-form" action="#" method="get">
-          <input type="text" name="search" placeholder="Search...">
-          <button type="submit">search</button>
-        </form>
+        <div class="row">
+          <div class="child2">
+            <h3>title</h3>
+            <p>product 4</p>
+          </div>
+          <div class="child2">
+            <h3>title</h3>
+            <p>product 5</p>
+          </div>
+        </div>
 
-        <ul id="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="account.html">account</a></li>
-          <li><a href="contact.html">contact us</a></li>
-        </ul>
-
+        <div class="row">
+          <div class="child3">
+            <h3>title</h3>
+            <p>product 6</p>
+          </div>
+          <div class="child3">
+            <h3>title</h3>
+            <p>product 7</p>
+          </div>
+        </div>
       </div>
-    </nav>
-  </header>
+    </main>
 
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="child1"><h3>title</h3><p>dddddddddddddddddd</p></div>
-        <div class="child1"><h3>title</h3><p>dddddddddddddddddd</p></div>
-        <div class="child1"><h3>title</h3><p>dddddddddddddddddd</p></div>
-      </div>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const nav = document.getElementById("nav-links");
+      const overlay = document.getElementById("overlay");
 
-      <div class="row">
-        <div class="child2"><h3>title</h3><p>dddddddddddddddddddddd</p></div>
-        <div class="child2"><h3>title</h3><p>dddddddddddddddddddddd</p></div>
-      </div>
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        overlay.classList.toggle("show");
+        menuBtn.classList.toggle("close");
+      });
 
-      <div class="row">
-        <div class="child3"><h3>title</h3><p>dddddddddddddddd</p></div>
-        <div class="child3"><h3>title</h3><p>dddddddddddddddd</p></div>
-      </div>
-    </div>
-  </main>
-
-  <script>
-    const menuBtn = document.getElementById('menu-btn')
-    const nav = document.getElementById('nav-links')
-    const overlay = document.getElementById('overlay')
-
-    menuBtn.addEventListener('click', () => {
-      nav.classList.toggle('open')
-      overlay.classList.toggle('show')
-      menuBtn.classList.toggle('close')
-    })
-
-    overlay.addEventListener('click', () => {
-      nav.classList.remove('open')
-      overlay.classList.remove('show')
-      menuBtn.classList.remove('close')
-    })
-  </script>
-
-</body>
+      overlay.addEventListener("click", () => {
+        nav.classList.remove("open");
+        overlay.classList.remove("show");
+        menuBtn.classList.remove("close");
+      });
+    </script>
+  </body>
 </html>

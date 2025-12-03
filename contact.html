@@ -1,62 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Page</title>
-  <link rel="stylesheet" href="style.contact.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="style.contact.css" />
+  </head>
 
-<body>
-  <div id="overlay"></div>
+  <body>
+    <div id="overlay"></div>
 
-  <header>
-    <nav class="navbar">
-      <div class="nav-content">
+    <header>
+      <nav class="navbar">
+        <div class="nav-content">
+          <div class="left-box">
+            <div class="menu-btn" id="menu-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
 
-        <div class="left-box">
-          <div class="menu-btn" id="menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <div class="logo">bonform</div>
           </div>
 
-          <div class="logo">bonform</div>
+          <form class="search-form" action="#" method="get">
+            <input type="text" name="search" placeholder="Search..." />
+            <button type="submit">Go</button>
+          </form>
+
+          <ul id="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="account.html">account</a></li>
+            <li><a href="contact.html">contact us</a></li>
+          </ul>
         </div>
+      </nav>
+    </header>
 
-        <form class="search-form" action="#" method="get">
-          <input type="text" name="search" placeholder="Search...">
-          <button type="submit">search</button>
-        </form>
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const nav = document.getElementById("nav-links");
+      const overlay = document.getElementById("overlay");
 
-        <ul id="nav-links">
-          <li><a href="index.html">home</a></li>
-          <li><a href="about.html">about</a></li>
-          <li><a href="account.html">account</a></li>
-          <li><a href="contact.html">contact us</a></li>
-        </ul>
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("open");
+        overlay.classList.toggle("show");
+        menuBtn.classList.toggle("close");
+      });
 
-      </div>
-    </nav>
-  </header>
-
-  <script>
-    const menuBtn = document.getElementById('menu-btn')
-    const nav = document.getElementById('nav-links')
-    const overlay = document.getElementById('overlay')
-
-    menuBtn.addEventListener('click', () => {
-      nav.classList.toggle('open')
-      overlay.classList.toggle('show')
-      menuBtn.classList.toggle('close')
-    })
-
-    overlay.addEventListener('click', () => {
-      nav.classList.remove('open')
-      overlay.classList.remove('show')
-      menuBtn.classList.remove('close')
-    })
-  </script>
-
-</body>
+      overlay.addEventListener("click", () => {
+        nav.classList.remove("open");
+        overlay.classList.remove("show");
+        menuBtn.classList.remove("close");
+      });
+    </script>
+  </body>
 </html>
