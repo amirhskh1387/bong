@@ -5,9 +5,16 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  background: #721212c1;
+  background: #5a0c0cc4;
   color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
 }
 
 #overlay {
@@ -32,7 +39,7 @@ header {
   padding: 12px 0;
 }
 
-.nav-content {
+.navbar .nav-content {
   width: 92%;
   margin: auto;
   display: flex;
@@ -54,28 +61,33 @@ header {
 }
 
 .search-form {
+  display: flex;
+  gap: 0; 
   width: 100%;
   max-width: 380px;
+  margin-left: 20px; 
 }
 
 .search-form input {
   padding: 7px 12px;
-  width: 100%;
   border-radius: 4px;
   border: none;
   outline: none;
+  width: 100%;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .navbar ul li a {
   text-decoration: none;
   color: #eee;
   font-size: 16px;
+  padding: 8px 10px;
   transition: 0.3s;
 }
 
@@ -92,9 +104,9 @@ header {
 }
 
 .menu-btn span {
-  height: 3px;
   width: 100%;
-  background: white;
+  height: 3px;
+  background: #fff;
   border-radius: 3px;
   transition: 0.3s;
 }
@@ -109,32 +121,6 @@ header {
 
 .menu-btn.close span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
-}
-
-@media (max-width: 768px) {
-  .navbar ul {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    padding-top: 80px;
-    background: #1a1a1a;
-    flex-direction: column;
-    transition: 0.3s;
-  }
-
-  .navbar ul.open {
-    left: 0;
-  }
-
-  .search-form {
-    max-width: 200px;
-  }
-
-  .menu-btn {
-    display: flex;
-  }
 }
 
 .contact-wrapper {
@@ -187,4 +173,36 @@ h2 {
   padding: 15px 0;
   color: #ddd;
   margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1a1a1a;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: 0.3s;
+  }
+
+  .navbar ul.open {
+    left: 0;
+  }
+
+  .navbar ul li {
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+
+  .search-form {
+    max-width: 200px;
+  }
 }
