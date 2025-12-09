@@ -117,6 +117,67 @@ header {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.about-hero {
+  width: 100%;
+  padding: 60px 20px;
+  background: url('wood-bg.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+}
+
+.about-hero .hero-text h1 {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-hero .hero-text p {
+  max-width: 600px;
+  margin: auto;
+  font-size: 18px;
+  color: #ddd;
+}
+
+.about-content {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  background: #ffffffdd;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.about-content h2 {
+  margin: 25px 0 10px;
+  font-size: 24px;
+  color: #222;
+}
+
+.about-content p {
+  margin-bottom: 15px;
+  font-size: 17px;
+  color: #333;
+}
+
+.product-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.product-list li {
+  font-size: 17px;
+  margin: 8px 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 25px 0;
+  color: #fff;
+  background: #0d0d0d;
+  margin-top: 50px;
+}
+
+
 @media (max-width: 768px) {
   .navbar ul {
     position: fixed;

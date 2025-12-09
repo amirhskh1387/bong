@@ -8,7 +8,6 @@
 body {
   background: #721212c1;
   color: #333;
-  line-height: 1.6;
 }
 
 #overlay {
@@ -33,7 +32,7 @@ header {
   padding: 12px 0;
 }
 
-.navbar .nav-content {
+.nav-content {
   width: 92%;
   margin: auto;
   display: flex;
@@ -55,33 +54,28 @@ header {
 }
 
 .search-form {
-  display: flex;
-  gap: 0; 
   width: 100%;
   max-width: 380px;
-  margin-left: 20px; 
 }
 
 .search-form input {
   padding: 7px 12px;
+  width: 100%;
   border-radius: 4px;
   border: none;
   outline: none;
-  width: 100%;
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 20px;
-  align-items: center;
 }
 
 .navbar ul li a {
   text-decoration: none;
   color: #eee;
   font-size: 16px;
-  padding: 8px 10px;
   transition: 0.3s;
 }
 
@@ -98,9 +92,9 @@ header {
 }
 
 .menu-btn span {
-  width: 100%;
   height: 3px;
-  background: #fff;
+  width: 100%;
+  background: white;
   border-radius: 3px;
   transition: 0.3s;
 }
@@ -124,9 +118,9 @@ header {
     left: -250px;
     width: 250px;
     height: 100%;
+    padding-top: 80px;
     background: #1a1a1a;
     flex-direction: column;
-    padding-top: 80px;
     transition: 0.3s;
   }
 
@@ -134,17 +128,63 @@ header {
     left: 0;
   }
 
-  .navbar ul li {
-    width: 100%;
-    padding: 15px 0;
-    text-align: center;
+  .search-form {
+    max-width: 200px;
   }
 
   .menu-btn {
     display: flex;
   }
+}
 
-  .search-form {
-    max-width: 200px;
-  }
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.contact-box {
+  background: #ffffffdd;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28);
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.item {
+  margin-bottom: 1.3rem;
+}
+
+.item h3 {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 3px;
+}
+
+.item p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.footer {
+  background: #0d0d0de9;
+  text-align: center;
+  padding: 15px 0;
+  color: #ddd;
+  margin-top: 40px;
 }
